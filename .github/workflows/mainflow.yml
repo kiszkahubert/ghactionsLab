@@ -33,7 +33,7 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: ${{ vars.DOCKERHUB_USERNAME }}/lab10
-        flavor: lastes=false
+        flavor: latest=false
         tags: |
           type=sha,prefix=sha-,format=short,priority=100
           type=semver,priority=200,pattern={{version}}
@@ -56,7 +56,7 @@ jobs:
         ignore_unfixed: true
         severity: CRITICAL,HIGH
         exit-code: 1
-    - name: Push image ot GHCR
+    - name: Push image to GHCR
       if: success()
       uses: docker/build-push-action@v5
       with:
