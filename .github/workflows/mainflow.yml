@@ -32,7 +32,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ vars.DOCKERHUB_USERNAME }}/lab10
+        images: ghcr.io/${{ github.repository }}
         flavor: latest=false
         tags: |
           type=sha,prefix=sha-,format=short,priority=100
