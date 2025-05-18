@@ -30,7 +30,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Docker metadata definitions
       id: meta
-      uses: docker/metadata-aciton@v5
+      uses: docker/metadata-action@v5
       with:
         images: ${{ vars.DOCKERHUB_USERNAME }}/lab10
         flavor: lastes=false
